@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gesture Calculator</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            background-image: url('checks.jpg');
+            background-size: 50%; /* Shrinks the background image to 50% of its original size */
+            background-repeat: repeat; /* Ensures the image repeats to fill the viewport */
+            background-position: center; /* Optional: Center the background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }        
+
+        h1 {
+            color: #000000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            max-width: 1600px;
+            width: 100%;
+        }
+
+        .video-container {
+            border: 2px solid #333;
+            margin-right: 20px;
+            max-width: 1200px;
+            flex: 3;
+        }
+
+        .response-container {
+            border: 1px solid #333;
+            background-color: #ffffff;
+            padding: 20px;
+            max-width: 300px;
+            flex: 1;
+            overflow-y: auto;
+            max-height: 600px;
+            font-size: larger;
+        }
+        .response-container h2 {
+            color: #000000;
+            margin-top: 0;
+        }
+
+        #response {
+            padding: 10px;
+            font-size: larger;
+        }
+
+        .response-container p {
+            word-wrap: break-word;
+        }
+        .span{
+            display:flex;
+        }
+        .logo{
+            width:50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        .heading{
+            font-size: 50px;
+            margin-top: -1px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function fetchResponse() {
+            fetch('/get_response')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.response){
+                        document.getElementById('response').innerHTML = '<h2>Answer:</h2><p>' + data.response + '</p>';
+                    }
+                })
+                .catch(error => console.error('Error fetching response:', error));
+        }
+
+        setInterval(fetchResponse, 1000);  // Fetch response every second
+    </script>
+</head>
+<body>
+    <span class="span">
+        <img src="logo.jpg" class="logo">   
+        <p class="heading">AIR COMPUTE</p>
+    </span>
+    <div class="container">
+        <div class="video-container">
+            <img src="{% url 'video_feed' %}" width="1200" />
+        </div>
+        <div class="response-container">
+            <div id="response">
+                <h2>Answer:</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

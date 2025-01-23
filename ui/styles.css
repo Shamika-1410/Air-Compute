@@ -1,0 +1,52 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+  }
+  .bg{
+    z-index: 1;
+  }
+  .get-demo img {
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .body {
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .content h1 {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  .content h1 span {
+    color: gray;
+    font-weight: bold;
+  }
+  
+  .content p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  .buttons {
+    margin-top: -270px;
+    z-index: 2;
+  }
+  
+  .button {
+    width: 150px;
+    height: auto;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+  }
+  

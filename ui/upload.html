@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .ocr-container {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 10px;
+            width: 48%;
+        }
+        .ocr-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .ocr-container input[type="file"] {
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #2b2b2b;
+            color: #e0e0e0;
+        }
+        .ocr-container button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #bb86fc;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .ocr-container button:hover {
+            background-color: #9f64e6;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            background-image: url('checks.jpg');
+            background-size: 50%; /* Shrinks the background image to 50% of its original size */
+            background-repeat: repeat; /* Ensures the image repeats to fill the viewport */
+            background-position: center; /* Optional: Center the background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .span{
+            display:flex;
+        }
+        .logo{
+            width:50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        .heading{
+            font-size: 50px;
+            margin-top: -1px;
+            font-weight: bold;
+        }  
+    </style>
+    <body>
+        <span class="span">
+            <img src="logo.jpg" class="logo">   
+            <p class="heading">AIR COMPUTE</p>
+        </span>
+        <div class="ocr-container">
+            <h2>Upload Image for OCR-Based Math Solver</h2>
+            <form action="/upload_image/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="image" accept="image/*" required />
+                <button type="submit">Solve Math Problem</button>
+            </form>
+
+            {% if text %}
+            <h3>OCR Math Problem Detected:</h3>
+            <p>{{ text }}</p>
+        {% endif %}
+        {% if api_response %}
+            <h3>Solved Math Problem:</h3>
+            <p>{{ api_response }}</p>
+        {% endif %}
+        </div>
+    </body>
+</html>
