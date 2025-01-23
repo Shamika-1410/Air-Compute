@@ -1,10 +1,10 @@
-# 🧮 Apple-Inspired AI Calculator
+# 🧮 Air-Compute
 
 ## 📝 Overview
-The Apple-Inspired AI Calculator is an innovative project that utilizes OpenCV and Google’s Gemini AI to solve mathematical problems of any complexity. The user can draw the math problem on the screen, and the AI model will interpret the visual input to provide a detailed solution. This project is similar to the Apple iPad calculator but leverages advanced AI technology for enhanced functionality and accuracy.
+The Air-Compute Calculator is an innovative project that utilizes OpenCV and Google’s Gemini AI to solve mathematical problems of any complexity. The user can draw the math problem on the screen, and the AI model will interpret the visual input to provide a detailed solution. This project is similar to the Apple iPad calculator but leverages advanced AI technology for enhanced functionality and accuracy. It also accepts soft copies of math problems and gives you the ai powered solutions .
 
 ## ✨ Features
-- ✍️ **Draw Math Problems:** Use your finger to draw any mathematical problem on the screen.
+- ✍️ **Draw/Upload Math Problems:** Use your finger to draw any mathematical problem on the screen or upload a soft copy of the math problem.
 - 🖱️ **Move Around:** Move the pointer around the screen by lifting two fingers.
 - 🗑️ **Reset Canvas:** Erase the current drawing by lifting the thumb.
 - 📤 **Send to AI Model:** Send the visual drawing to the model by lifting the little finger.
@@ -42,12 +42,6 @@ The Apple-Inspired AI Calculator is an innovative project that utilizes OpenCV a
 5. **Access the Web Application:**
    - Open your web browser and navigate to [http://127.0.0.1:8000](http://127.0.0.1:8000) to use the app.
 
-## 🎥 Demo Video
-
-Check out the demo video to see the Virtual AI Calculator in action:60k+ reactions
-
-[Watch the Demo on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7221422183175139328/)
-
 ## 🎨 Drawing Rules
 
 To interact with the calculator, follow these drawing rules:
@@ -57,24 +51,4 @@ To interact with the calculator, follow these drawing rules:
 - 📤 Send the visual drawing to the AI model by lifting the little finger.
 
 The AI model will then interpret the drawing and display a detailed solution.
-
-## 📚 Learning Resources
-
-To better understand the technologies used in this project, you can explore the following resources:
-- **OpenCV Documentation:** [OpenCV Documentation](https://docs.opencv.org/)
-- **OpenCV Detailed Video:** [OpenCV Video](https://youtu.be/oXlwWbU8l2o?si=8UFFRz7uRiHsULZr)
-- **Air Canvas Setup:** [Air Canvas](https://youtu.be/T7sjrWc4QEc?si=nHRhGhyf86rPtbO3)
-
-## 🤝 Contribution
-
-We welcome contributions to enhance this project. Feel free to submit issues and pull requests. Your feedback and suggestions are highly appreciated!
-
-## 📜 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Thanks to everyone who has supported this project.
-
 
